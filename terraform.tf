@@ -7,6 +7,6 @@ resource "aws_instance" "ex" {
   instance_type = "t2.micro"
   tags = {
     Name = "terraform-ec2-instance"
-    Environment = "Production"
+    Environment = "Testing"
   }
 }
