@@ -54,7 +54,8 @@ resource "aws_eks_node_group" "my_node_group" {
     name   = "my-node-group-launch-template"
     version = "$Latest"
   }
-
+  node_role_arn = aws_iam_role.eks_cluster.arn
+  subnet_ids    = ["subnet-09e5086cb5732ef92", "subnet-0c560d4762e677007", "subnet-012bf135fc92de1b3", "subnet-09ed9c8d387893fe4", "subnet-07be01196f968b01d"]  // Choose the appropriate subnets
   instance_types = ["t2.medium"]
 
   tags = {
