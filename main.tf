@@ -51,9 +51,9 @@ resource "aws_eks_node_group" "my_node_group" {
   }
 
   launch_template {
-    //name   = "my-node-group-launch-template"  # Update with the actual launch template name
-    update_launch_template_default_version = true
-    //version = "$Latest"  # Update with the desired version
+    name   = "my-node-group-launch-template"  # Update with the actual launch template name
+    //update_launch_template_default_version = true
+    version = "$Latest"  # Update with the desired version
   }
 
   node_role_arn = aws_iam_role.eks_cluster.arn
