@@ -55,9 +55,8 @@ resource "aws_eks_node_group" "my_node_group" {
     version = "$Latest"  # Update with the desired version
   }
 
-  node_group_status = "ACTIVE"
-  node_role_arn     = aws_iam_role.eks_cluster.arn
-  subnet_ids        = ["subnet-09e5086cb5732ef92", "subnet-0c560d4762e677007", "subnet-012bf135fc92de1b3"]  // Choose the appropriate subnets
+  node_role_arn = aws_iam_role.eks_cluster.arn
+  subnet_ids    = ["subnet-09e5086cb5732ef92", "subnet-0c560d4762e677007", "subnet-012bf135fc92de1b3", "subnet-09ed9c8d387893fe4", "subnet-07be01196f968b01d"]  // Choose the appropriate subnets
 
   instance_types = ["t2.medium"]
 
@@ -65,6 +64,7 @@ resource "aws_eks_node_group" "my_node_group" {
     Terraform = "true"
   }
 }
+
 
 
 resource "aws_security_group" "my_security_group" {
