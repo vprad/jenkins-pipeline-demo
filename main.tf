@@ -7,7 +7,7 @@ resource "aws_eks_cluster" "my_cluster" {
   role_arn = aws_iam_role.eks_cluster.arn
 
   vpc_config {
-    vpc_id = "vpc-073a176c9982bb6b3"
+    
     subnet_ids = ["subnet-09e5086cb5732ef92", "subnet-0c560d4762e67700y", "subnet-012bf135fc92de1b3", "subnet-09ed9c8d387893fe4", "subnet-07be01196f968b01d"]  # Change these to your desired subnet IDs
   }
 }
